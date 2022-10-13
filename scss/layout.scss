@@ -10,19 +10,21 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
+  height: 100%;
 }
 
 .wrapper {
   position: relative;
-  width: 100px;
-  min-width: $containerWidth + 20px;
-  min-height: 100%;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
 }
 
 .container {
-  width: $containerWidth;
+  width: 95%;
+  max-width: $containerWidth;
   margin: 0 auto;
+  position: relative;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -58,5 +60,5 @@ a {
 
 img {
   display: block;
-  min-width: 100%;
+  max-width: 100%;
 }
