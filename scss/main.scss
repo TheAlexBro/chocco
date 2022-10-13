@@ -1,0 +1,16 @@
+$containerWidth: 940px;
+$baseFontSize: 18px;
+
+//colors
+$blue: #61C4D9;
+$darkGreen: #0b4d3c;
+
+//normilize
+@import url('link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css');
+
+//setup
+@import url('https://fonts.googleapis.com/css2? family= Alegreya+Sans:ital,wght@0,300;0,400;0,700;1,400 & display=swap');
+@import "layout"; 
+
+//components 
+@import "hero";
