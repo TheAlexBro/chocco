@@ -19,7 +19,12 @@
   display: flex;
 }
 
+.icon__leaf {
+  margin-right: 10px;
+}
+
 .feature__text {
   font-size: 16px;
   max-width: 85px;
+  line-height: 1.2;
 }
