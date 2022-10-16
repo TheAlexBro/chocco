@@ -1,9 +1,10 @@
 $containerWidth: 940px;
 $baseFontSize: 18px;
 
+
 //colors
 $blue: #61C4D9;
-$darkGreen: #0b4d3c;
+$darkGreen: #365A49;
 
 //setup
 @import "layout"; 
@@ -13,3 +14,8 @@ $darkGreen: #0b4d3c;
 @import "header";
 @import "features";
 @import "btn";
+@import "section";
+@import "headline";
+@import "benefits";
+@import "benefit";
+@import "benefits-section";
