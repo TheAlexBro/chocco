@@ -4,6 +4,9 @@
   justify-content: space-between;
 }
 
+.logo__img {
+  margin-right: -13px;
+}
 
 .menu__list {
   display: flex;
@@ -19,6 +22,10 @@
 
 .menu__link {
   text-decoration: none;
+}
+
+.phone__icon {
+  margin-right: 4px;
 }
 
 .phone__number {

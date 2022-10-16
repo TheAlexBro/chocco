@@ -1,8 +1,8 @@
 .hero {
   background: url('../img/decor/Батончики.svg') left 78% center no-repeat, url('../img/decor/узор\ 1.png') right bottom no-repeat;
   background-color: $blue;
-  height: 100%;
-  min-height: rem(652px);
+  height: 100vh;
+  min-height: 650px;
   color: #fff;
   position: relative;
 }
@@ -17,6 +17,7 @@
 
 .hero__title-section {
   width: 46%;
+  margin-bottom: 16px;
 }
 
 .hero__main-title {
@@ -30,6 +31,10 @@
 .hero__title-desc {
   font-size: 21px;
   margin-bottom: 28px;
-  padding-right: 10%;
+  padding-right: 14%;
   margin-bottom: 45px;
+}
+
+.hero__icons-section {
+  width: 50%;
 }
