@@ -1,0 +1,25 @@
+.reviews-section {
+  background: url(../img/decor/ягоды-1.png) right 2% top 8% no-repeat;
+  position: relative;
+  
+    &::before {
+      content: url(../img/decor/узор-2.png);
+      position: absolute;
+      left: 0;
+      bottom: -25%;
+      z-index: 1;
+    }
+
+    &::after {
+      content: url(../img/decor/ягоды-2.png);
+      position: absolute;
+      left: 0;
+      bottom: -14%;
+      z-index: 2;
+    }
+
+}
+
+.reviews-section__title {
+  margin-bottom: 26px;
+}
