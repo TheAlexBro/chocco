@@ -4,6 +4,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  &--font--color--green {
+    color: #497870;
+  }
 }
 
 .section__title {
