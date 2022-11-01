@@ -1,6 +1,10 @@
 $containerWidth: 940px;
 $baseFontSize: 18px;
 
+//breakpoints
+$tablets: 768px;
+$phones: 480px;
+
 
 // z-index
 $z-fixed-menu: 100;
@@ -8,6 +12,8 @@ $z-fixed-menu: 100;
 //colors
 $blue: #61C4D9;
 $darkGreen: #365A49;
+
+@import "media.scss";
 
 //setup
 @import "layout"; 
@@ -29,4 +35,7 @@ $darkGreen: #365A49;
 @import "form.scss";
 @import "radio.scss";
 @import "fixed-menu.scss";
+@import "hamburger.scss";
+
+
 
