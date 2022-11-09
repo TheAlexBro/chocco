@@ -4,6 +4,10 @@
   user-select: none;
   margin-right: rem(28px);
 
+  @include phones {
+    margin-bottom: rem(10px);
+  }
+
     &:last-child {
       margin-right: 0;
     }
@@ -13,7 +17,7 @@
         border-radius: 0;
 
         &::before {
-          background: url('../img/icons/checkmark.png') center center no-repeat;
+          background: url('../img/icons/checkmark.svg') center center no-repeat;
         }
       }
     }

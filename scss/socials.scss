@@ -1,0 +1,15 @@
+.social__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include phones {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.social__item {
+  margin-right: rem(14px);
+  display: flex;
+}

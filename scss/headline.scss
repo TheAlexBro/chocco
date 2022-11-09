@@ -10,4 +10,8 @@
 .headline__subtitle {
   padding: 0 26%;
   color: #666666;
+
+  @include phones {
+    padding: 0 3%;
+  }
 }

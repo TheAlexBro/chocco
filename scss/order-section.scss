@@ -1,0 +1,33 @@
+.order-section {
+  position: relative;
+  background: url('../img/background/order.png') center center / cover no-repeat;
+
+  &::before {
+    position: absolute;
+    content: url('../img/decor/ягода.png');
+    left: 2%;
+    bottom: 4%;
+  }
+
+  &::after {
+    position: absolute;
+    content: url('../img/decor/лист-3.png');
+    right: 2%;
+    bottom: 4%;
+  }
+
+  @include tablets {
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.order-section__title {
+  color: #365A49;
+  margin-bottom: rem(53px);
+}
