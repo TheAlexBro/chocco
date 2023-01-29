@@ -1,0 +1,50 @@
+.menu {
+  margin: 0 rem(30px);
+  padding-top: rem(5px);
+
+  @include tablets {
+    display: none;
+  }
+}
+
+.menu--vertical {
+  @include tablets {
+    display: flex;
+    color: #fff;
+  }
+}
+
+.menu__list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include tablets {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+}
+
+.menu__item {
+  margin-right: rem(27px);
+  margin-bottom: rem(10px);
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include tablets {
+    margin-right: 0;
+    margin-bottom: rem(22px);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.menu__link {
+  text-decoration: none;
+  white-space: nowrap;
+}

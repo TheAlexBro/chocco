@@ -1,0 +1,27 @@
+.fullscreen-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #313131;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: rem(36px);
+  line-height: 1.5;
+  padding-bottom: 30%;
+  
+  @include phones {
+    font-size: rem(40px);
+    padding-bottom: 0;
+    padding-top: 30%;
+  }
+}
+
+.fullscreen-menu__close {
+  position: absolute;
+  right: 5%;
+  top: 4%;
+}

@@ -11,14 +11,4 @@
     background: none;
   }
 
-  &::before {
-    position: absolute;
-    content: url('../img/decor/малина\ .png');
-    left: 0;
-    bottom: rem(-114px);
-
-    @include phones {
-      display: none;
-    }
-  }
 }

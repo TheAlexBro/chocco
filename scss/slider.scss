@@ -1,0 +1,43 @@
+.slider {
+  display: block;
+  width: rem(25px);
+  height: rem(41px);
+  position: absolute;
+  z-index: 3;
+}
+
+.arrow__prew {
+  top: 53%;
+  left: -3%;
+
+  @include tablets {
+    top: 26%;
+    left: 19%;
+  }
+
+  @include phones {
+    top: 16%;
+    left: -2%;
+  }
+}
+
+.arrow__next {
+  top: 53%;
+  right: -3%;
+
+  @include tablets {
+    top: 26%;
+    right: 15%;
+  }
+
+  @include phones {
+    top: 16%;
+    right: -2%;
+  }
+}
+
+.slider__elem {
+  width: rem(24px);
+  height: rem(40px);
+  fill: transparent;
+}

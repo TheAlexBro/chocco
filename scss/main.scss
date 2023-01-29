@@ -21,6 +21,8 @@ $darkGreen: #365A49;
 //components 
 @import "hero";
 @import "header";
+@import "menu.scss";
+@import "phone.scss";
 @import "features";
 @import "btn";
 @import "section";
@@ -36,8 +38,11 @@ $darkGreen: #365A49;
 @import "radio.scss";
 @import "fixed-menu.scss";
 @import "hamburger.scss";
-
+@import "product.scss";
+@import "compound.scss";
+@import "slider.scss";
 @import "footer-section.scss";
 @import "map.scss";
 @import "socials.scss";
 @import "sprite-icons.scss";
+@import "fullscreen-menu.scss";

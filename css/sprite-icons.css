@@ -2,31 +2,21 @@
   width: rem(12px);
   height: rem(12px);
   fill: #fff;
-  transition: .3s;
-  
+  transition: 0.3s;
 }
 
 .phone__icon--theme--green {
   fill: #497870;
 }
 
-
-
 .social__img {
   width: rem(20px);
   height: rem(20px);
   fill: #ccc;
-  transition: .3s;
-
-
-  &:hover {
-    fill: #000;
-  }
-
+  transition: 0.3s;
+}
+.social__img:hover {
+  fill: #000;
 }
 
-.fullscreen-menu__close-svg {
-  fill: #fff;
-  width: rem(20px);
-  height: rem(20px);
-}
+/*# sourceMappingURL=sprite-icons.css.map */

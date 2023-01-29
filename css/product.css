@@ -1,0 +1,13 @@
+.products-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+.product {
+  display: flex;
+  margin: 0;
+}
+
+/*# sourceMappingURL=product.css.map */
