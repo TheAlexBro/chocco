@@ -16,4 +16,8 @@
   margin-bottom: rem(68px); 
   text-align: center;
   text-transform: uppercase;
+
+  @include phones {
+    font-size: rem(40px);
+  }
 }

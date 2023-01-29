@@ -12,4 +12,8 @@
 .social__item {
   margin-right: rem(14px);
   display: flex;
+
+  &:first-child {
+    padding-top: rem(6px);
+  }
 }

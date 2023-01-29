@@ -1,9 +1,10 @@
 .features {
   display: flex;
+  justify-content: space-between;
 }
 
 .features__item {
-  margin-right: rem(46px);
+  margin-right: rem(10px);
 
     &:last-child {
       margin-right: 0;
@@ -12,7 +13,7 @@
 
 .feature__item {
   width: rem(45px);
-  margin-right: rem(7px);
+  margin-right: rem(10px);
 }
 
 .feature {

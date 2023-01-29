@@ -1,7 +1,7 @@
 .btn {
-  font-size: rem(19px);
-  font-weight: bold;
-  padding: rem(18px) rem(35px);
+  font-size: rem(16px);
+  font-weight: 800;
+  padding: rem(22px) rem(41px);
   text-transform: uppercase;
   border-radius: rem(100px);
   line-height: 1;
@@ -48,7 +48,7 @@
 
           &:hover {
             color: #365A49;
-            font-weight: 700;
+            text-decoration: underline;
           }
       }
 }

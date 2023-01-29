@@ -1,13 +1,13 @@
-.phone__icon {
-  margin-right: rem(4px);
-  flex-shrink: 0 ;
-}
+// .phone__icon {
+//   margin-right: rem(4px);
+//   flex-shrink: 0 ;
+// }
 
 .phone-number {
   font-size: rem(22px);
   text-decoration: none;
   display: flex;
-  align-items: center;
+  align-items: baseline;
   white-space: nowrap;
 }
 

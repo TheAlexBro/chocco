@@ -1,31 +1,17 @@
-const body = document.body;
-
 const openButton = document.querySelector('.hamburger');
-const successModal = createModal('');
+const closeButton = document.querySelector('.fullscreen-menu__close');
+const fMenu = document.querySelector('.fullscreen-menu');
 
 openButton.addEventListener('click', e => {
   e.preventDefault();
 
-  body.appendChild(successModal);
+  fMenu.style.top = 0;
+  fMenu.style.opacity = 1;
 });
 
-function createModal(content) {
-  const overlayElement = document.createElement('div');
-  overlayElement.classList.add('overlay');
+closeButton.addEventListener('click', e => {
+  e.preventDefault();
 
-  const template = document.querySelector('#fullscreenOverlayTemplate');
-
-  overlayElement.innerHTML = template.innerHTML;
-
-  const closeButton = document.querySelector('.fullscreen-menu__close');
-
- /* 
-  closeButton.addEventListener('click', e => {
-    e.preventDefault();
-  });
-*/
-
-  return overlayElement;
-}
-
-
+  fMenu.style.top = "-100%";
+  fMenu.style.opacity = 0;
+});

@@ -1,16 +1,36 @@
+.header-logo__icon  {
+  width: rem(52.6px);
+  height: rem(38px);
+  fill: #fff;
+}
+
 .phone__icon {
-  width: rem(12px);
-  height: rem(12px);
+  width: rem(14px);
+  height: rem(14px);
   fill: #fff;
   transition: .3s;
-  
+  margin-right: rem(6px);
 }
 
 .phone__icon--theme--green {
+  margin-right: rem(4px);
   fill: #497870;
 }
 
+.benefit__icon {
+  width: rem(68px);
+  height: rem(68px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
+.icon__leaf {
+  width: rem(41px);
+  height: rem(41px);
+  fill: #fff;
+}
 
 .social__img {
   width: rem(20px);
