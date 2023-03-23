@@ -1,25 +1,3 @@
-.interactive-avatar {
-  width: rem(74px);
-  height: rem(74px);
-  // border: rem(4px) solid #365A49;
-  border: rem(4px) solid transparent;
-  border-radius: 50%;
-  overflow: hidden;
-  position: relative;
-
-      &--active {
-        border-color: #365A49;
-      }
-}
-
-.interactive-avatar__link {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-}
-
 .interactive-avatar__img {
   display: block;
   width: 100%;
