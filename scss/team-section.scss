@@ -1,0 +1,11 @@
+.team-section__title {
+  margin-bottom: rem(48px);
+
+  @include tablets {
+    margin-bottom: rem(27px);
+  }
+  
+  @include phones {
+    margin-bottom: rem(22px);
+  }
+}

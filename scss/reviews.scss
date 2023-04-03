@@ -14,7 +14,8 @@
   }
 
   @include phones {
-    padding: rem(42px) rem(38px);
+    padding: rem(42px) rem(38px) 0 rem(38px);
+    margin-bottom: rem(5px);
   }
 
   &::before {
@@ -41,6 +42,10 @@
 .reviews__list {
   position: relative;
   min-height: rem(280px);
+
+  @include tablets {
+    min-height: rem(360px);
+  }
 }
 
 .reviews__item {
@@ -82,7 +87,7 @@
 .reviews__content {
   flex: 1;
   margin-left: rem(34px);
-  padding: rem(25px) rem(128px) rem(0px) rem(0px);
+  padding: rem(25px) rem(96px) rem(0px) rem(0px);
 
   & p {
     line-height: 1.42;
@@ -90,7 +95,7 @@
   }
 
   @include tablets {
-    padding: 0;
+    padding: 0 3%;
     margin: 0 0 rem(16px) 0;
   }
     
@@ -105,6 +110,11 @@
   @include tablets {
     margin-bottom: rem(16px);
   }
+
+  @include phones {
+    margin: 0 rem(50px) rem(9px) rem(50px);
+    line-height: 1.2;
+  }
 }
 
 .reviews__text {
@@ -113,11 +123,42 @@
   @include tablets {
     margin-bottom: rem(21px);
   }
+
+  @include phones {
+    margin: 0 rem(4px);
+  }
+
+  & p {
+    @include phones {
+      line-height: 1.2;
+    }
+  }
 }
 
 .reviews__author {
   font-size: rem(18px);
   font-weight: 500;
+  color: #000;
+
+  @include phones {
+    display: none;
+  }
+
+  &--active {
+    display: block;
+  }
+}
+
+.reviews-autor-mobile__list {
+  display: none;
+  justify-content: center;
+  margin-bottom: rem(42px);
+  pointer-events: none;
+
+  @include phones {
+    display: flex;
+    pointer-events: auto;
+  }
 }
 
 .reviews_switcher {
