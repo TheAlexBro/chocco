@@ -5,6 +5,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+  />
   <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/main.css">
@@ -553,39 +557,40 @@
         <div class="container">
           <h2 class="section__title order-section__title">Закажите доставку</h2>
           <form class="form">
+            <input type="hidden" name="to" value="somewhere123@mail.com">
             <div class="form__col">
               <div class="form__row">
                 <label class="form__block">
                   <div class="form__title">Имя</div>
-                  <input type="text" class="form__input">
+                  <input type="text" name="name" class="form__input">
                 </label>
                 <label class="form__block">
                   <div class="form__title">Телефон</div>
-                  <input type="text" class="form__input">
+                  <input type="text" name="phone" class="form__input">
                 </label>
               </div>
               <div class="form__row">
                 <label class="form__block">
                   <div class="form__title">Улица</div>
-                  <input type="text" class="form__input">
+                  <input type="text" name="street" class="form__input">
                 </label>
                </div> 
               <div class="form__row">
                 <label class="form__block">
                   <div class="form__title">Дом</div>
-                  <input type="text" class="form__input">
+                  <input type="text" name="home" class="form__input">
                 </label>
                 <label class="form__block">
                   <div class="form__title">Корпус</div>
-                  <input type="text" class="form__input">
+                  <input type="text" name="part" class="form__input">
                 </label>
                 <label class="form__block">
                   <div class="form__title">Квартира</div>
-                  <input type="text" class="form__input">
+                  <input type="text" name="flat" class="form__input">
                 </label>
                 <label class="form__block">
                   <div class="form__title">Этаж</div>
-                  <input type="text" class="form__input">
+                  <input type="text" name="floor" class="form__input">
                 </label>
               </div>
             </div>
@@ -593,7 +598,7 @@
               <div class="form__row row__pay">
                 <label class="form__block">
                   <div class="form__title">Комментарий</div>
-                  <textarea class="form__input form__input--textarea"></textarea>
+                  <textarea name="comment" class="form__input form__input--textarea"></textarea>
                 </label>               
               </div>
               <div class="form__controls">
@@ -616,11 +621,19 @@
                 </label>               
               </div>
               <div class="form__btns">
-                <input type="submit" value="Заказать" class="btn btn--theme--green">
+                <input type="submit" value="Заказать" class="btn btn--theme--green--two">
                 <input type="reset" value="Очистить" class="btn btn--theme--transparent">
               </div>
             </div>
           </form>
+        </div>
+        <div class="modal" id="modal">
+          <div class="modal__container">
+            <div class="modal__content"><span>Cообщение отправлено!</span></div>
+            <div class="modan__button-container">
+              <a href="#" class="btn app-submit-btn btn--theme--dark--green">закрыть</a>
+            </div>
+          </div>
         </div>
       </section>
       <section class="section footer-section">
@@ -727,9 +740,12 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
   <script src="./js/fullscreenMenu.js"></script>
   <script src="./js/tabs.js"></script>
   <script src="./js/team.js"></script>
   <script src="./js/slider.js"></script>
+  <script src="./js/modal.js"></script>
 </body>
 </html>

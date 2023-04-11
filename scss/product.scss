@@ -83,10 +83,8 @@
 }
 
 .product__img {
-  position: absolute;
-  top: rem(-173px);
-  right: rem(29px);
-  max-width: 95%;
+  display: block;
+  max-width: 100%;
 
  @include tablets {
   position: static;

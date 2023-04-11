@@ -69,6 +69,11 @@
     outline: none;
   }
 
+  &--error {
+    border-color: hotpink;
+    outline: none;
+  }
+
   &--textarea {
     height: rem(154px);
     resize: none;

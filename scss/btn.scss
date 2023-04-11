@@ -12,31 +12,55 @@
       &--theme--white {
         background: #fff;
         color: $darkGreen;
+
           &:hover {
             color: #fff;
             background: $darkGreen;
           }
       }
 
+      &--theme--dark--green {
+        background: $darkGreen;
+        color: #fff;
+        // border: 1px solid $darkGreen;
+
+          &:hover {
+            background: #fff;
+            color: $darkGreen;
+            border: 1px solid $darkGreen;
+          }
+      }
+
       &--theme--green {
-        background: #fff;
-        color: #2E4E3F;
+        background: #2E4E3F;
+        color: #fff;
         
+        &:hover {
+          background: #fff;
+          color: #2E4E3F;
+        }
+
+        &--two {
+          background: #fff;
+          color: #2E4E3F;
+
           &:hover {
             background: #2E4E3F;
             color: #fff;
           }
+        }
       }
 
       &--theme--bright-green {
-        background: #fff;
-        color: #497870;
+        background: #497870;
+        color: #fff;
         border: 1px #497870 solid;
         
-          &:hover {
-            background: #497870;
-            color: #fff;
-          }
+        &:hover {    
+          background: #fff;
+          color: #497870;
+          border: 1px #497870 solid;
+        }
       }
 
       &--theme--transparent {
