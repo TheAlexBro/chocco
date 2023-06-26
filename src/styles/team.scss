@@ -1,0 +1,152 @@
+.team__list {
+  display: flex;
+
+  &--version--desktop {
+    & .team__item .team__content {
+      position: absolute;
+      top: 100%;    
+    }
+
+    @include tablets {
+      display: none;
+    }
+  }
+ 
+
+  &--version--mobile {
+    display: none;
+
+    @include tablets {
+      display: flex;
+      flex-direction: column;
+    } 
+  }
+}
+
+.team__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  position: relative;
+
+  @include tablets {
+    margin-bottom: rem(9px);
+  }
+
+  @include phones {
+    margin-bottom: 0;
+  }
+}
+
+.team--active {
+  & .team__title::after {
+    rotate: 180deg;
+  }
+
+  @include tablets {
+    margin-bottom: rem(33px);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @include phones {
+    margin-bottom: rem(25px);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.team__member {
+  margin-bottom: rem(18px);
+  margin-right: rem(4px);
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include tablets {
+    margin-right: 0;
+    margin-top: rem(10px);
+    margin-bottom: rem(20px);
+  }
+
+  @include phones {
+    margin-bottom: rem(15px);
+  }
+}
+
+.team__img {
+  object-fit: contain;
+
+  @include phones {
+    width: rem(138px);
+    height: rem(180px);
+  }
+}
+
+.team__title {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  font-size: rem(21px);
+  margin-bottom: rem(3px);
+  color: #292929;
+
+  &::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: rem(4px) solid transparent;
+    border-right: rem(4px) solid transparent;
+    border-top: rem(7px) solid #365A49;
+    margin-left: 4px;
+  }
+}
+
+.team__content {
+  overflow: hidden;
+  height: 0;
+  transition: height .3s;
+}
+
+.team__content-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team__position {
+  font-weight: 400;
+  font-size: rem(18px);
+  margin-bottom: rem(3px);
+
+  @include tablets {
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+}
+
+.team__content-text {
+  color: #666666;
+  font-weight: 300;
+  font-size: rem(18px);
+  text-align: center;
+  line-height: 1.2;
+
+  @include tablets {
+    padding: 0 rem(244px);
+  }
+
+  @media screen and (max-width: 630px) {
+    padding: 0 136px;
+  }
+
+  @include phones {
+    padding: 0 rem(100px);
+  }
+}
