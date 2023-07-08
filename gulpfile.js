@@ -17,14 +17,7 @@ const svgo = require('gulp-svgo');
 const svgSprite = require('gulp-svg-sprite');
 const env = process.env.NODE_ENV;
 
-const {SRC_PATH, DEST_PATH, STYLE_LIBS, JS_LIBS} = require('./gulp.config')
-
-
-const styles = [
-  'node_modules/normalize.css/normalize.css',
-  'src/styles/main.scss'
-];
-
+const {SRC_PATH, DEST_PATH, STYLE_LIBS, JS_LIBS} = require('./gulp.config');
 
 task('copy:html', () => {
   return src(`${SRC_PATH}/*.html`)
@@ -33,8 +26,9 @@ task('copy:html', () => {
 });
 
 task('copy:img', () => {
-  return src(`${SRC_PATH}/images/**/*`)
-  .pipe(dest(`${DEST_PATH}/images`))
+  return src('src/img/**/*.*', '!src/img/icons/*.svg')
+  .pipe(dest('dist/img'))
+  .pipe(reload({ stream: true }));
 });
 
 task('copy:video', ()=> {
@@ -48,8 +42,21 @@ task( 'clean', () => {
     .pipe( rm() )
 });
 
+const stylesPlugin = [
+  'node_modules/normalize.css/normalize.css',
+  'node_modules/bxslider/dist/jquery.bxslider.min.css',
+  'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css'
+];
+
+task('styles:plugin', () => {
+  return src(stylesPlugin)
+    .pipe(concat('plugin.min.css'))
+    .pipe(cleanCSS())
+    .pipe(dest('dist'))
+});
+
 task('styles', () => {
- return src([...STYLE_LIBS, 'src/styles/main.scss'])
+ return src('src/styles/main.scss')
    .pipe(gulpif(env === 'dev', sourcemaps.init()))
    .pipe(concat('main.min.scss'))
    .pipe(sassGlob())
@@ -67,7 +74,9 @@ task('styles', () => {
 });
 
 const scripts = [
-  // 'node_modules/jquery/dist/jquery.min.js',
+  'node_modules/jquery/dist/jquery.min.js',
+  'node_modules/bxslider/dist/jquery.bxslider.min.js',
+  'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
   'src/scripts/*.js'
 ]; 
 
@@ -85,7 +94,7 @@ task( 'scripts', () => {
 });
 
 task('icons', () => {
-  return src('src/images/icons/*.svg')
+  return src('src/img/icons/*.svg')
     .pipe(svgo({
       plugins: [
         {
@@ -102,7 +111,7 @@ task('icons', () => {
         }
       }
     }))
-    .pipe(dest('dist/images/icons'));
+    .pipe(dest('dist/img/icons'));
 });
 
 task('server', () => {
@@ -118,14 +127,14 @@ task('watch', () => {
   watch('./src/styles/**/*.scss', series('styles'));
   watch('./src/*.html', series('copy:html'));
   watch('./src/scripts/*.js', series('scripts'));
-  watch('./src/images/icons/*.svg', series('icons'));
-  watch('./src/images/**/*', series('copy:img'));
+  watch('./src/img/icons/*.svg', series('icons'));
+  watch('./src/img/**/*', series('copy:img'));
  });
 
 task("default", 
   series(
     'clean', 
-    parallel('copy:html', 'copy:img', 'copy:video', 'styles', 'scripts', 'icons'),
+    parallel('styles:plugin', 'copy:html', 'copy:img', 'copy:video', 'styles', 'scripts', 'icons'),
     parallel('watch', 'server')
   )
 );
@@ -133,5 +142,5 @@ task("default",
 task('build',
  series(
    'clean',
-   parallel('copy:html', 'copy:img', 'copy:video', 'styles', 'scripts', 'icons'))
+   parallel('styles:plugin', 'copy:html', 'copy:img', 'copy:video', 'styles', 'scripts', 'icons'))
 );
