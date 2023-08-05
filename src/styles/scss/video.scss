@@ -1,0 +1,144 @@
+.video-section {
+    position: relative;
+
+    &::after {
+        position: absolute;
+        content: url('./img/decor/Ежевика\ фото\ 1.png');
+        right: 0%;
+        bottom: -14%;
+        z-index: 1;
+
+        @include tablets {
+            bottom: -16%;
+        }
+
+        @include phones {
+            display: none;
+        }
+    }
+}
+
+.video__title {
+    margin-bottom: 27px;
+}
+
+.video__container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+
+    &::before {
+        position: absolute;
+        content: url('./img/decor/Лист\ 1.png');
+        left: 2%;
+        bottom: -10%;
+        
+        @include tablets {
+            left: -4%;
+            bottom: 20%;
+        }
+
+        @include phones {
+            display: none;
+        }
+    }
+
+    &::after {
+        position: absolute;
+        content: url('./img/decor/лист-2\ 1.png');
+        right: 2%;
+        top: -16%;
+
+        @include phones {
+            display: none;
+        }
+    }
+}
+
+.video-js {
+    width: 662px;
+    height: 390px;
+    object-fit: cover;
+
+    @include tablets {
+        width: 594px;
+        height: 351.57;
+    }
+    
+    @include phones {
+        width: 394px;
+        height: 233px;
+    }
+}
+
+.vjs-matrix { 
+    .vjs-poster img {
+        object-fit: cover;
+    }
+    .vjs-big-play-button {
+        background: url('./img/icons/play.svg') center center no-repeat;
+        border: none;
+        width: 75.06px;
+        height: 109.67px;
+        font-size: inherit;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: 0;
+        margin-left: 0;
+
+        @include tablets {
+            width: 67.35px;
+            height: 98.4px;
+        }
+
+        @include phones {
+            width: 44.68px;
+            height: 65.27px;
+        }
+        
+        .vjs-icon-placeholder {
+            display: none;
+        }
+    }
+    &:hover {
+        .vjs-big-play-button {
+            background-color: transparent;
+        }
+    }
+    .vjs-control-bar {
+        background: #404040;
+        display: flex;
+        align-items: center;
+    }
+    .vjs-button {
+        color: #626262;
+    }
+    .vjs-control  {
+        order: 1;
+
+        &:focus {
+            text-shadow: 0 0 1em black;
+        }
+    }
+    .vjs-time-control {
+        display: none;
+    }
+    .vjs-picture-in-picture-control {
+        display: none;
+    }
+    .vjs-fullscreen-control {
+        order: 4;
+    }
+    .vjs-progress-control {
+        order: 2;
+    }
+    .vjs-volume-panel {
+        order: 3;
+
+        .vjs-mouse-display {
+            visibility: visible;
+        }
+    }
+}

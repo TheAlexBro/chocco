@@ -1,0 +1,29 @@
+.benefits-section {
+  position: relative;
+  background: url('../img/decor/серый\ лист.png') left center no-repeat;
+  position: relative;
+
+  @include tablets {
+    background-position: left top 19%;
+  }
+
+  @include phones {
+    background: none;
+  }
+  
+  &::before {
+    position: absolute;
+    content: url('../img/decor/малина\ .png');
+    left: 0;
+    bottom: -17%;
+    z-index: 1;
+    
+    @include tablets {
+      bottom: -11%;
+    }
+
+    @include phones {
+      display: none;
+    }
+  }
+}

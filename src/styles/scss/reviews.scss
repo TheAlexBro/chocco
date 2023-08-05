@@ -1,0 +1,201 @@
+.reviews {
+  margin-bottom: rem(12px);
+}
+
+.reviews_display {
+  background: #F8FAF9;
+  padding: rem(42px);
+  margin-bottom: rem(15px);
+  overflow: hidden;
+  position: relative;
+
+  @include tablets {
+    padding: rem(42px) rem(20px);
+  }
+
+  @include phones {
+    padding: rem(42px) rem(38px) 0 rem(38px);
+    margin-bottom: rem(5px);
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    width: rem(84px);
+    height: rem(84px);
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: rem(-62px);
+  }
+
+  &::after {
+    content: url('../img/decor/серая-малина.png');
+    position: absolute;
+    right: 0;
+    top: 2%;
+
+    @include phones {
+      top: 0;
+    }
+  }
+}
+
+.reviews__list {
+  position: relative;
+  min-height: rem(280px);
+
+  @include tablets {
+    min-height: rem(360px);
+  }
+}
+
+.reviews__item {
+  display: flex;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+
+  &--active {
+    position: static;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  @include tablets {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+.reviews__avatar {
+  width: rem(254px);
+  height: rem(264px);
+
+  @include tablets {
+    width: rem(130px);
+    height: rem(130px);
+    margin-bottom: rem(32px);
+  }
+}
+
+.reviews-avatar-img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.reviews__content {
+  flex: 1;
+  margin-left: rem(34px);
+  padding: rem(25px) rem(96px) rem(0px) rem(0px);
+
+  & p {
+    line-height: 1.42;
+    color: #666666;
+  }
+
+  @include tablets {
+    padding: 0 3%;
+    margin: 0 0 rem(16px) 0;
+  }
+    
+}
+
+.reviews__title {
+  font-size: rem(27px);
+  font-weight: bold;
+  margin-bottom: rem(12px);
+  display: block;
+
+  @include tablets {
+    margin-bottom: rem(16px);
+  }
+
+  @include phones {
+    margin: 0 rem(50px) rem(9px) rem(50px);
+    line-height: 1.2;
+  }
+}
+
+.reviews__text {
+  margin-bottom: rem(25px);
+
+  @include tablets {
+    margin-bottom: rem(21px);
+  }
+
+  @include phones {
+    margin: 0 rem(4px);
+  }
+
+  & p {
+    @include phones {
+      line-height: 1.2;
+    }
+  }
+}
+
+.reviews__author {
+  font-size: rem(18px);
+  font-weight: 500;
+  color: #000;
+
+  @include phones {
+    display: none;
+  }
+
+  &--active {
+    display: block;
+  }
+}
+
+.reviews-autor-mobile__list {
+  display: none;
+  justify-content: center;
+  margin-bottom: rem(42px);
+  pointer-events: none;
+
+  @include phones {
+    display: flex;
+    pointer-events: auto;
+  }
+}
+
+.reviews_switcher {
+  display: flex;
+  justify-content: center;
+}
+
+.reviews_switcher__item {
+  width: rem(74px);
+  height: rem(74px);
+  border: rem(4px) solid transparent;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  margin-right: rem(6px); 
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover {
+    border-color: #365A49;
+  }
+
+  &--active {
+    border-color: #365A49;
+  }
+}
+
+.reviews_switcher__link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}

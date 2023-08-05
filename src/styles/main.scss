@@ -1,0 +1,53 @@
+$containerWidth: 940px;
+$baseFontSize: 18px;
+
+//breakpoints
+$tablets: 768px;
+$phones: 480px;
+
+
+// z-index
+$z-fixed-menu: 100;
+
+//colors
+$blue: #61C4D9;
+$darkGreen: #365A49;
+
+@import "scss/aamedia.scss";
+
+//setup
+@import "scss/layout.scss"; 
+
+//components 
+@import "scss/hero";
+@import "scss/header";
+@import "scss/menu.scss";
+@import "scss/phone.scss";
+@import "scss/features";
+@import "scss/btn";
+@import "scss/section";
+@import "scss/headline";
+@import "scss/benefits";
+@import "scss/benefit";
+@import "scss/benefits-section";
+@import "scss/reviews-section";
+@import "scss/reviews";
+@import "scss/interactive-avatar";
+@import "scss/order-section";
+@import "scss/form.scss";
+@import "scss/radio.scss";
+@import "scss/fixed-menu.scss";
+@import "scss/hamburger.scss";
+@import "scss/product.scss";
+@import "scss/compound.scss";
+@import "scss/slider.scss";
+@import "scss/footer-section.scss";
+@import "scss/map.scss";
+@import "scss/socials.scss";
+@import "scss/sprite-icons.scss";
+@import "scss/team-section.scss";
+@import "scss/team.scss";
+@import "scss/fullscreen-menu.scss";
+@import "scss/modal.scss";
+@import "scss/video.scss";
+@import "scss/product-menu-section.scss";
