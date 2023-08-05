@@ -16,7 +16,7 @@ $darkGreen: #365A49;
 @import "scss/aamedia.scss";
 
 //setup
-@import "scss/layout"; 
+@import "scss/layout.scss"; 
 
 //components 
 @import "scss/hero";
@@ -49,3 +49,5 @@ $darkGreen: #365A49;
 @import "scss/team.scss";
 @import "scss/fullscreen-menu.scss";
 @import "scss/modal.scss";
+@import "scss/video.scss";
+@import "scss/product-menu-section.scss";

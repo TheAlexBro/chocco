@@ -12,6 +12,11 @@
 .fixed-menu__item {
   margin-bottom: rem(5px);
 
+    &:hover {
+      .fixed-menu__link {
+        border-color: #fff;
+      }
+    }
     &--active {
       .fixed-menu__link {
         border-color: #fff;
@@ -39,4 +44,24 @@
       left: 50%;
       transform: translate(-50%, -50%);
     }
+}
+
+.fixed-menu--shadowed {
+  .fixed-menu__link {
+    &::before {
+      background: #313131;
+    }
+  }
+  .fixed-menu__item {
+    &:hover {
+      .fixed-menu__link {
+        border-color: #313131;
+      }
+    }
+    &--active {
+      .fixed-menu__link {
+        border-color: #313131;
+      }
+    }
+  }
 }

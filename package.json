@@ -21,6 +21,7 @@
     "gulp-concat": "^2.6.1",
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
     "gulp-px2rem-converter": "^1.5.4",
     "gulp-rm": "^2.0.0",
     "gulp-sass": "^5.1.0",
@@ -35,7 +36,10 @@
     "@fancyapps/fancybox": "^3.5.7",
     "bxslider": "^4.2.14",
     "jquery": "^3.6.4",
-    "normalize.css": "^8.0.1"
+    "jquery-touchswipe": "^1.6.19",
+    "mobile-detect": "^1.4.5",
+    "normalize.css": "^8.0.1",
+    "video.js": "^8.3.0"
   },
   "description": ""
 }

@@ -1,0 +1,117 @@
+.products-menu-section {
+    background: url('./img/background/products.jpg') center center/cover no-repeat;
+    position: relative;
+    color: white;
+    justify-content: flex-start;
+
+    &::before {
+        position: absolute;
+        content: '';
+        background: rgb(0, 0, 0, .3);
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        opacity: .7;
+    }
+}
+
+.products-menu__container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.products-menu-section__title {
+    margin-bottom: 0;
+    margin-left: 5%;
+    margin-top: 7%;
+
+    @include tablets {
+        margin-left: 6%;
+        margin-top: 11%;
+    }
+    @include phones {
+        margin-left: 3%;
+        margin-top: 15%;
+    }
+}
+
+.products-menu__list {
+    position: absolute;
+    display: flex;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+}
+
+.product-menu__item {
+    display: flex;
+}
+
+// .product-menu--active {
+//     .product-menu__desc {
+//         width: 520px;
+//     }
+// }
+
+.product-menu-rotate {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 102px;
+    cursor: pointer;
+    background: black;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: '';
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: rgb(0, 0, 0, .5);
+    }
+}
+
+.product-menu--bg--1 {
+    .product-menu-rotate {
+        background: url('./img/background/assort_title1.png') 35% center/cover no-repeat;
+    }
+}
+.product-menu--bg--2 {
+    .product-menu-rotate {
+        background: url('./img/background/poster.png') 21% center/cover no-repeat;
+    }
+}
+.product-menu--bg--3 {
+    .product-menu-rotate {
+        background: url('./img/background/assort_title3.png') 34% center/cover no-repeat;
+    }
+}
+
+.product-menu__title {
+    font-size: 48px;
+    transform: rotate(-90deg);
+    white-space: nowrap;
+}
+
+.product-menu__desc {
+    width: 0;
+    background: rgb(0, 0, 0, .7);
+    font-size: 16px;
+    position: relative;
+    transition: width .2s;
+    overflow: hidden;
+    
+    p {
+        padding: 6% 16% 0% 8%;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+}
+
+

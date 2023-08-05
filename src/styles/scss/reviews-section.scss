@@ -2,6 +2,10 @@
   background: url('../img/decor/ягоды-1.png') right 2% top 8% no-repeat;
   position: relative;
   align-items: center;
+
+  @include tablets {
+    background: url('../img/decor/ягоды-1.png') right -5% top 2% no-repeat;
+  }
   
   @include phones {
     background: none;
@@ -12,10 +16,15 @@
     background: url("../img/decor/узор-2.png") center center / contain no-repeat;
     position: absolute;
     left: 0;
-    bottom: rem(-175px);
+    bottom: -20%;
     z-index: 1;
     width: rem(102px);
     height: rem(321px);
+
+    @include tablets {
+      left: -4%;
+      bottom: -13%;
+    }
 
     @include phones {
       background: none;
@@ -29,8 +38,13 @@
     height: rem(193px);
     position: absolute;
     left: 0;
-    bottom: rem(-100px);
+    bottom: -11%;
     z-index: 2;
+
+    @include tablets {
+      left: -4%;
+      bottom: -5%;
+    }
 
     @include phones {
       background: none;

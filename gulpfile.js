@@ -15,6 +15,7 @@ const uglify = require('gulp-uglify');
 const gulpif = require('gulp-if');
 const svgo = require('gulp-svgo');
 const svgSprite = require('gulp-svg-sprite');
+const imagemin = require('gulp-imagemin');
 const env = process.env.NODE_ENV;
 
 const {SRC_PATH, DEST_PATH, STYLE_LIBS, JS_LIBS} = require('./gulp.config');
@@ -26,7 +27,8 @@ task('copy:html', () => {
 });
 
 task('copy:img', () => {
-  return src('src/img/**/*.*', '!src/img/icons/*.svg')
+  return src(['src/img/**/*.*', '!src/img/icons/*.svg'])
+  .pipe(imagemin())
   .pipe(dest('dist/img'))
   .pipe(reload({ stream: true }));
 });
@@ -45,7 +47,8 @@ task( 'clean', () => {
 const stylesPlugin = [
   'node_modules/normalize.css/normalize.css',
   'node_modules/bxslider/dist/jquery.bxslider.min.css',
-  'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css'
+  'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css',
+  'node_modules/video.js/dist/video-js.min.css'
 ];
 
 task('styles:plugin', () => {
@@ -77,6 +80,10 @@ const scripts = [
   'node_modules/jquery/dist/jquery.min.js',
   'node_modules/bxslider/dist/jquery.bxslider.min.js',
   'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
+  'node_modules/video.js/dist/video.min.js',
+  'node_modules/video.js/dist/lang/ru.js',
+  'node_modules/jquery-touchswipe/jquery.touchSwipe.min.js',
+  'node_modules/mobile-detect/mobile-detect.min.js',
   'src/scripts/*.js'
 ]; 
 
@@ -94,23 +101,23 @@ task( 'scripts', () => {
 });
 
 task('icons', () => {
-  return src('src/img/icons/*.svg')
-    .pipe(svgo({
-      plugins: [
-        {
-          removeAttrs: {
-            attrs: '(fill|stroke|style|width|height|data.*)'
-          }
-        }
-      ]
-    }))
-    .pipe(svgSprite({
-      mode: {
-        symbol: {
-          sprite: '../sprite.svg'
-        }
-      }
-    }))
+  return src(['src/img/icons/*.svg'])
+    // .pipe(svgo({
+    //   plugins: [
+    //     {
+    //       removeAttrs: {
+    //         attrs: '(fill|stroke|style|width|height|data.*)'
+    //       }
+    //     }
+    //   ]
+    // }))
+    // .pipe(svgSprite({
+    //   mode: {
+    //     symbol: {
+    //       sprite: '../sprite.svg'
+    //     }
+    //   }
+    // }))
     .pipe(dest('dist/img/icons'));
 });
 

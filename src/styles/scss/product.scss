@@ -6,16 +6,34 @@
   background-color: #F8FAF9;
 
   &::before {
+    content: url("./img/decor/узор\ 3.png");
     position: absolute;
-    content: url('../img/decor/малина\ .png');
-    left: 0;
-    top: rem(-212px);
-    
+    bottom: -30%;
+    right: 0;
+
+    @include tablets {
+      bottom: -20%;
+    }
+
     @include phones {
       display: none;
     }
   }
-  
+
+  &::after {
+    position: absolute;
+    content: url('./img/decor/blueberry.png');
+    bottom: -10%;
+    right: 1%;
+
+    @include tablets {
+      bottom: -1%;
+    }
+
+    @include phones {
+      display: none;
+    }
+  }
 }
 
 .products-slider {

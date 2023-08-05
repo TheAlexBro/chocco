@@ -1,7 +1,7 @@
 .hero {
   background: url('../img/decor/узор\ 1.png') right bottom no-repeat;
   background-color: $blue;
-  height: 100vh;
+  height: 100%;
   min-height: rem(652px);
   color: #fff;
   position: relative;
@@ -39,6 +39,7 @@
   height: 100%;
   padding: rem(24px) 0 rem(45px);
   background: url('../img/decor/Батончики.svg') right center / 50% auto no-repeat;
+  z-index: 1;
 
   @include tablets {
     background: none;
@@ -81,6 +82,7 @@
   @include phones {
     line-height: 1;
     font-size: rem(36px);
+    padding: 0 60px;
   }
 }
 
