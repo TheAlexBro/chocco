@@ -1,5 +1,5 @@
 .hero {
-  background: url('../img/decor/узор\ 1.png') right bottom no-repeat;
+  background: url('./img/decor/узор\ 1.png') right bottom no-repeat;
   background-color: $blue;
   height: 100%;
   min-height: rem(652px);
@@ -19,14 +19,14 @@
 
   &::before {
     position: absolute;
-    content: url('../img/decor/Лист\ 1.png');
+    content: url('./img/decor/Лист\ 1.png');
     bottom: rem(-41px);
     left: 2%;   
   }
 
   &::after {
     position: absolute;
-    content: url('../img/decor/comp.png');
+    content: url('./img/decor/comp.png');
     bottom: rem(-55px);
     right: 0;
   }
@@ -38,7 +38,7 @@
   justify-content: space-between;
   height: 100%;
   padding: rem(24px) 0 rem(45px);
-  background: url('../img/decor/Батончики.svg') right center / 50% auto no-repeat;
+  background: url('./img/decor/Батончики.svg') right center / 50% auto no-repeat;
   z-index: 1;
 
   @include tablets {
@@ -62,7 +62,7 @@
       content: "";
       width: rem(316px);
       height: rem(338px);
-      background: url('../img/tablets/comp.png') center center / contain no-repeat;;
+      background: url('./img/tablets/comp.png') center center / contain no-repeat;;
       margin-bottom: rem(20px);
     }
   }

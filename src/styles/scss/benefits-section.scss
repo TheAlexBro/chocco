@@ -1,6 +1,6 @@
 .benefits-section {
   position: relative;
-  background: url('../img/decor/серый\ лист.png') left center no-repeat;
+  background: url('./img/decor/серый\ лист.png') left center no-repeat;
   position: relative;
 
   @include tablets {
@@ -13,7 +13,7 @@
   
   &::before {
     position: absolute;
-    content: url('../img/decor/малина\ .png');
+    content: url('./img/decor/малина\ .png');
     left: 0;
     bottom: -17%;
     z-index: 1;

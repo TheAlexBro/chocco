@@ -4,7 +4,9 @@
   "main": "gulpfile.js",
   "scripts": {
     "gulp": "cross-env NODE_ENV=dev gulp",
-    "build": "cross-env NODE_ENV=prod gulp build"
+    "build": "cross-env NODE_ENV=prod gulp build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
@@ -35,6 +37,7 @@
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
     "bxslider": "^4.2.14",
+    "gh-pages": "^5.0.0",
     "jquery": "^3.6.4",
     "jquery-touchswipe": "^1.6.19",
     "mobile-detect": "^1.4.5",

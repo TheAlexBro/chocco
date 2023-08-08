@@ -1,10 +1,10 @@
 .reviews-section {
-  background: url('../img/decor/ягоды-1.png') right 2% top 8% no-repeat;
+  background: url('./img/decor/ягоды-1.png') right 2% top 8% no-repeat;
   position: relative;
   align-items: center;
 
   @include tablets {
-    background: url('../img/decor/ягоды-1.png') right -5% top 2% no-repeat;
+    background: url('./img/decor/ягоды-1.png') right -5% top 2% no-repeat;
   }
   
   @include phones {
@@ -13,7 +13,7 @@
 
   &::before {
     content: "";
-    background: url("../img/decor/узор-2.png") center center / contain no-repeat;
+    background: url("./img/decor/узор-2.png") center center / contain no-repeat;
     position: absolute;
     left: 0;
     bottom: -20%;
@@ -33,7 +33,7 @@
 
   &::after {
     content: "";
-    background: url("../img/decor/ягоды-2.png") center center / contain no-repeat;
+    background: url("./img/decor/ягоды-2.png") center center / contain no-repeat;
     width: rem(135px);
     height: rem(193px);
     position: absolute;

@@ -17,7 +17,7 @@
 
       &::before {
         position: absolute;
-        content: url('../img/decor/circles.png');
+        content: url('./img/decor/circles.png');
         right: 0;
         transform: translateX(50%);
         top: 20%;

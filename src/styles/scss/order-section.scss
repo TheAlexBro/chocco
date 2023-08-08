@@ -1,17 +1,18 @@
 .order-section {
   position: relative;
-  background: url('../img/background/order.png') center center / cover no-repeat;
+  background: url('./img/background/order.png') center center / cover no-repeat;
+  background-color: #20B387;
 
   &::before {
     position: absolute;
-    content: url('../img/decor/ягода.png');
+    content: url('./img/decor/ягода.png');
     left: 2%;
     bottom: 4%;
   }
 
   &::after {
     position: absolute;
-    content: url('../img/decor/лист-3.png');
+    content: url('./img/decor/лист-3.png');
     right: 2%;
     bottom: 4%;
   }
